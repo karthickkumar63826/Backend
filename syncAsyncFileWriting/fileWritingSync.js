@@ -1,15 +1,16 @@
-const fs = require("fs");
+const fs = require('fs');
 
-console.log("Start");
+console.log("start");
 
-const writingFile = () => {
-  try {
-    fs.writeFileSync("sample1.txt", "Hello World! from Syncronized ");
-    console.log("file is created successfully")
-  } catch (error) {
-    console.log(error);
+const writingFile = () =>{
+  try{
+    fs.writeFileSync('sampl.txt', "Writing new content for this text file", "utf-8");
+    console.log("Content is written successfully");
   }
-};
+  catch(err){
+    console.log(err);
+  }
+}
 
 writingFile();
 

@@ -1,0 +1,2 @@
+Hi this is an another example for write file code on another file
+This is an appended content

@@ -1,20 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 
-const readingfile = (readFile) => {
+const readingFile = (readFile) => {
   readFile(
     path.join(__dirname, "files", "renamedFile.txt"),
     "utf-8",
     (err, data) => {
-      if (err) throw err;
+      if (err) {
+        console.log(err);
+      }
       console.log(data);
     }
   );
 };
 
-readingfile(fs.readFile);
-
-process.on("uncaughtException", (err) => {
-  console.log("Their is an uncought Err " + err);
-  process.exit(1);
-});
+readingFile(fs.readFile);
